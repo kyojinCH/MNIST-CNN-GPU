@@ -147,4 +147,4 @@ A typical LeNet-5 style network:
    ```
 
    
-
+PS: When running the executable, do press enter to allow the code to execute until the next step.
