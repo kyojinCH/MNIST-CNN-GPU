@@ -41,6 +41,7 @@ This repository demonstrates an **inference-only** implementation of a LeNet-5 s
 
 From the provided screenshot, an approximate layout might be:
 
+```bash
 YourRepo/ 
 ├── exported_weights/   # .txt weight/bias files for each layer 
   ├── layer_0_0.txt 
@@ -62,6 +63,7 @@ YourRepo/
 ├── test_mnist.cu        # Implements CUDA kernels & utility code 
 ├── test_mnist.h         # Declarations of kernels & CPU helpers 
 └── train-images.rar     # Compressed MNIST images
+```
 
 **Key Files**:
 
@@ -132,9 +134,11 @@ Flatten => 400
 2. **Compile** with `nvcc`:
    ```bash
    nvcc main.cu test_mnist.cu -o mnist_infer
+   ```
 3. **Run** with:
    ```bash
    ./mnist_infer 'digit_image_index'
+   ```
 
    
 
