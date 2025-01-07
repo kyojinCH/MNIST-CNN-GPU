@@ -1,8 +1,12 @@
 # MNIST-CNN-GPU
 A hands-on project showcasing a manually implemented CNN inference pipeline for the MNIST dataset using CUDA. Includes custom kernels for convolution, pooling, and dense layers, focusing on GPU acceleration and memory management without high-level frameworks. Ideal for learning CUDA and CNN fundamentals.
+This repository follows the structure of a lab assignment aimed at implementing LeNet-5 inference from scratch using CUDA. It includes tasks such as:
+- Part 1: Matrix operations (multiplication, addition) to practice CUDA kernel development.
+- Part 2: Implementing the initial convolution and subsampling layers.
+- Part 3: Training the model in Python using a provided notebook and exporting weights for CUDA.
 
 ---
-# LeNet-5 MNIST Inference (C++/CUDA)
+# LeNet-5 MNIST Inference (C++/CUDA) (PART 3à
 
 This repository demonstrates an **inference-only** implementation of a LeNet-5 style convolutional neural network for MNIST digit classification, all in **C++** with **CUDA** kernels. The network architecture consists of two convolution layers (C1 & C3), each followed by 2×2 mean-pooling (S2 & S4), then three fully-connected layers. Final predictions are produced via CPU softmax.
 
@@ -76,13 +80,15 @@ YourRepo/
 ## Network Architecture
 
 A typical LeNet-5 style network:
-[28 x 28, single-channel] -> (C1: 6 filters, 5x5, same padding) -> [28 x 28 x 6] -> addBias + tanh -> (S2: 2x2 mean-pool) -> [14 x 14 x 6]
-
--> (C3: 16 filters, 5x5, valid, multi-channel) -> [10 x 10 x 16] -> addBias + tanh -> (S4: 2x2 mean-pool) -> [5 x 5 x 16]
-
-Flatten => 400
--> Dense(120) -> bias -> tanh -> Dense(84) -> bias -> tanh -> Dense(10) -> bias -> CPU softmax -> final digit
-
+```bash
+[28 x 28, single-channel] 
+   -> (C1: 6 filters, 5x5, same padding) -> [28 x 28 x 6] -> addBias + tanh 
+   -> (S2: 2x2 mean-pool) -> [14 x 14 x 6] 
+   -> (C3: 16 filters, 5x5, valid, multi-channel) -> [10 x 10 x 16] -> addBias + tanh 
+   -> (S4: 2x2 mean-pool) -> [5 x 5 x 16]
+   -> Flatten -> Dense(120) -> bias -> tanh -> Dense(84) -> bias -> tanh -> Dense(10) 
+   -> bias -> CPU softmax -> final digit.
+```
 
 
 ---
