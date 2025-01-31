@@ -6,7 +6,7 @@ This repository follows the structure of a lab assignment aimed at implementing 
 - Part 3: Training the model in Python using a provided notebook and exporting weights for CUDA.
 
 ---
-# LeNet-5 MNIST Inference (C++/CUDA) (PART 3à
+# LeNet-5 MNIST Inference (C++/CUDA) (PART 3)
 
 This repository demonstrates an **inference-only** implementation of a LeNet-5 style convolutional neural network for MNIST digit classification, all in **C++** with **CUDA** kernels. The network architecture consists of two convolution layers (C1 & C3), each followed by 2×2 mean-pooling (S2 & S4), then three fully-connected layers. Final predictions are produced via CPU softmax.
 
